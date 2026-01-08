@@ -117,8 +117,8 @@ console.log(instructor)
 
 
 
-/// API: the vlaues that comes in the past days was in XML now it's in the json format
-/// json is look like{}, simply it is object
+/// API: the vlaues that api brings  in the past days was in XML now it's in the json format
+/// json looks like{}, simply it is an object
 
 //{
 // 'name':'sandesh',
