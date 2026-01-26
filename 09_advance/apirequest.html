@@ -1,0 +1,55 @@
+// ajax - asynchronous js and xml
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    
+</body>
+
+
+<script>
+
+    const requesturl = 'https://api.github.com/users/sandeshx3'
+
+ const xhr = new XMLHttpRequest();
+ xhr.open('GET',requesturl)
+
+ xhr.onreadystatechange = function(){
+    
+    
+console.log(xhr.readyState)
+
+if(xhr.readyState === 4 ){
+
+    const data = JSON.parse(this.responseText)
+    console.log(typeof data)
+    console.log(data.public_repos)
+    console.log(data.avatar_url)
+
+}   
+
+
+ }
+
+ // as open iteself don't get called
+
+ xhr.send()
+
+
+ // most of the time the data come after api call is in the form of the string
+
+// console is the js developer tools
+// NODE js run under v8 engine it give debugging tools,api call
+// core js engine are written under the wrapper of c++
+
+
+
+
+
+</script>
+
+</html>
