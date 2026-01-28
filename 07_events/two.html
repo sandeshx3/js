@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> async js</h1>
+    <button id = 'button'>Stop</button>
+</body>
+<script>
+setTimeout(function(){
+    console.log('hello my name is sandesh')
+},2000) /// as time in millisecond the name will print after 2 sec
+
+
+const saySandesh = function(){
+    console.log('sandesh')
+}
+setTimeout(saySandesh,2000)
+
+
+// change the h1 content using the setTimeout
+
+const changeh1 = function(){
+    document.querySelector('h1').innerHTML = 'async js updated'
+
+}
+setTimeout(changeh1,3000)
+
+
+// to clear the timeout
+// it's need the reference
+
+//const changeMe = setTimeout()
+
+document.querySelector('#button').addEventListener(
+
+'click',
+function(){
+    clearTimeout(changeh1)
+    console.log('stopped')
+})
+
+
+
+
+</script>
+</html>
